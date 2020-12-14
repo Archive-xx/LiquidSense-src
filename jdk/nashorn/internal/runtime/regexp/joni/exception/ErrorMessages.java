@@ -1,0 +1,43 @@
+package jdk.nashorn.internal.runtime.regexp.joni.exception;
+
+public interface ErrorMessages {
+   String ERR_INVALID_CODE_POINT_VALUE = "invalid code point value";
+   String ERR_TOO_BIG_WIDE_CHAR_VALUE = "too big wide-char value";
+   String ERR_TOO_LONG_WIDE_CHAR_VALUE = "too long wide-char value";
+   String ERR_PARSER_BUG = "internal parser error (bug)";
+   String ERR_UNDEFINED_BYTECODE = "undefined bytecode (bug)";
+   String ERR_UNEXPECTED_BYTECODE = "unexpected bytecode (bug)";
+   String ERR_END_PATTERN_AT_LEFT_BRACE = "end pattern at left brace";
+   String ERR_END_PATTERN_AT_LEFT_BRACKET = "end pattern at left bracket";
+   String ERR_EMPTY_CHAR_CLASS = "empty char-class";
+   String ERR_PREMATURE_END_OF_CHAR_CLASS = "premature end of char-class";
+   String ERR_END_PATTERN_AT_ESCAPE = "end pattern at escape";
+   String ERR_END_PATTERN_AT_META = "end pattern at meta";
+   String ERR_END_PATTERN_AT_CONTROL = "end pattern at control";
+   String ERR_META_CODE_SYNTAX = "invalid meta-code syntax";
+   String ERR_CONTROL_CODE_SYNTAX = "invalid control-code syntax";
+   String ERR_CHAR_CLASS_VALUE_AT_END_OF_RANGE = "char-class value at end of range";
+   String ERR_UNMATCHED_RANGE_SPECIFIER_IN_CHAR_CLASS = "unmatched range specifier in char-class";
+   String ERR_TARGET_OF_REPEAT_OPERATOR_NOT_SPECIFIED = "target of repeat operator is not specified";
+   String ERR_TARGET_OF_REPEAT_OPERATOR_INVALID = "target of repeat operator is invalid";
+   String ERR_UNMATCHED_CLOSE_PARENTHESIS = "unmatched close parenthesis";
+   String ERR_END_PATTERN_WITH_UNMATCHED_PARENTHESIS = "end pattern with unmatched parenthesis";
+   String ERR_END_PATTERN_IN_GROUP = "end pattern in group";
+   String ERR_UNDEFINED_GROUP_OPTION = "undefined group option";
+   String ERR_INVALID_POSIX_BRACKET_TYPE = "invalid POSIX bracket type";
+   String ERR_INVALID_LOOK_BEHIND_PATTERN = "invalid pattern in look-behind";
+   String ERR_INVALID_REPEAT_RANGE_PATTERN = "invalid repeat range {lower,upper}";
+   String ERR_TOO_BIG_NUMBER = "too big number";
+   String ERR_TOO_BIG_NUMBER_FOR_REPEAT_RANGE = "too big number for repeat range";
+   String ERR_UPPER_SMALLER_THAN_LOWER_IN_REPEAT_RANGE = "upper is smaller than lower in repeat range";
+   String ERR_EMPTY_RANGE_IN_CHAR_CLASS = "empty range in char class";
+   String ERR_TOO_MANY_MULTI_BYTE_RANGES = "too many multibyte code ranges are specified";
+   String ERR_TOO_SHORT_MULTI_BYTE_STRING = "too short multibyte code string";
+   String ERR_INVALID_BACKREF = "invalid backref number";
+   String ERR_NUMBERED_BACKREF_OR_CALL_NOT_ALLOWED = "numbered backref/call is not allowed. (use name)";
+   String ERR_EMPTY_GROUP_NAME = "group name is empty";
+   String ERR_INVALID_GROUP_NAME = "invalid group name <%n>";
+   String ERR_INVALID_CHAR_IN_GROUP_NAME = "invalid char in group number <%n>";
+   String ERR_GROUP_NUMBER_OVER_FOR_CAPTURE_HISTORY = "group number is too big for capture history";
+   String ERR_INVALID_COMBINATION_OF_OPTIONS = "invalid combination of options";
+}

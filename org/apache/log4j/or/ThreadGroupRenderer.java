@@ -1,0 +1,38 @@
+package org.apache.log4j.or;
+
+import org.apache.log4j.Layout;
+
+public class ThreadGroupRenderer implements ObjectRenderer {
+   public String doRender(Object o) {
+      if (!(o instanceof ThreadGroup)) {
+         try {
+            return o.toString();
+         } catch (Exception var6) {
+            return var6.toString();
+         }
+      } else {
+         StringBuffer sbuf = new StringBuffer();
+         ThreadGroup tg = (ThreadGroup)o;
+         sbuf.append("java.lang.ThreadGroup[name=");
+         sbuf.append(tg.getName());
+         sbuf.append(", maxpri=");
+         sbuf.append(tg.getMaxPriority());
+         sbuf.append("]");
+         Thread[] t = new Thread[tg.activeCount()];
+         tg.enumerate(t);
+
+         for(int i = 0; i < t.length; ++i) {
+            sbuf.append(Layout.LINE_SEP);
+            sbuf.append("   Thread=[");
+            sbuf.append(t[i].getName());
+            sbuf.append(",");
+            sbuf.append(t[i].getPriority());
+            sbuf.append(",");
+            sbuf.append(t[i].isDaemon());
+            sbuf.append("]");
+         }
+
+         return sbuf.toString();
+      }
+   }
+}
